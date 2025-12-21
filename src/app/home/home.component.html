@@ -1,0 +1,198 @@
+<section class="hero-section">
+    <div class="header-idioma">
+        <button mat-button 
+                class="boton-idioma"
+                (click)="flagEspanolOIngles = !flagEspanolOIngles" 
+                [matTooltip]="!flagEspanolOIngles ? 'Change to English' : 'Cambiar a Español'"
+                matTooltipPosition="below">
+            <mat-icon style="font-size: 30px; width: 30px; height: 30px;">language</mat-icon>
+            {{ !flagEspanolOIngles ? 'Español' : 'English' }}
+        </button>
+    </div>
+    <div class="hero-content" >
+        <div class="logo-container">
+            <img src="assets/PhyloMatchLogo.jpeg" alt="PhyloMatch Logo" class="main-logo">
+        </div>
+
+        <h2 style="padding-top: 30px; font-size: 25px;">
+            <strong>
+                {{!flagEspanolOIngles ? tituloEsp : tituloEng}}
+            </strong>
+        </h2>
+    </div>
+</section>
+
+<section class="services-overview">
+    <h2 class="section-title">Nuestros Servicios</h2>
+
+    <div class="services-grid" style="margin-left: 120px; margin-right: 120px;">
+        <mat-card class="service-card">
+            <mat-card-header>
+                <mat-card-title> 
+                    <div style="display: flex; justify-content: center;">
+                        <mat-icon class="card-icon">search</mat-icon> 
+                        <span style="padding-top: 3px;">
+                            Identificación Molecular de Microorganismos
+                        </span>
+                    </div>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>Identificación de especies mediante filogenia multilocus y genomas completos.</p>
+
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-flat-button color="primary" class="texto-grande-bold">
+                    <mat-icon>mail</mat-icon>
+                    <span>{{ !flagEspanolOIngles ? 'Contacto' : 'Contact' }}</span>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="service-card">
+            <mat-card-header>
+                <mat-card-title>
+                    <div style="display: flex; justify-content: center;">
+                        <mat-icon class="card-icon">account_tree</mat-icon>
+                        <span style="padding-top: 3px;">
+                            Metagenómica
+                        </span>
+                    </div>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>Análisis de comunidades microbianas complejas y perfiles taxonómicos detallados.</p>
+            </mat-card-content>
+            <!-- <mat-card-actions>
+                <button mat-button color="primary" routerLink="/servicios/metagenomas">SABER MÁS</button>
+            </mat-card-actions> -->
+        </mat-card>
+
+        <!-- <mat-card class="service-card">
+            <mat-card-header>
+                <mat-icon mat-card-avatar>biotech</mat-icon>
+                <mat-card-title>Asesoramiento en Biologia Molecular</mat-card-title>
+            </mat-card-header>
+        <mat-card-content>
+            <p>Asesoramiento Online en extracción de ADN y amplificación por PCR de marcadores moleculares Genero-especificos para la identificación del microorganismo.</p>
+        </mat-card-content>
+        </mat-card>
+
+        <mat-card class="service-card">
+            <mat-card-header>
+                <mat-icon mat-card-avatar>account_tree</mat-icon>
+                <mat-card-title>Asesoramiento en BioInformatica</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>Asesoramiento Online en el manejo de secuencias de ADN con herramientas BioInformaticas de Vanguardia.</p>
+            </mat-card-content>
+        </mat-card> -->
+    </div>
+
+    <div style="display: flex; margin-top: 40px;">
+        <div style="width: 50%; margin-left: 120px; margin-right: -8px;">
+            <h2 class="section-title">Como Trabajamos</h2>
+
+            <div class="services-grid">
+                <mat-card class="service-card">
+                    <mat-card-header>
+                        <mat-card-title> 
+                            <div style="display: flex; justify-content: center;">
+                                <mat-icon class="card-icon">biotech</mat-icon> 
+                                <span style="padding-top: 3px;">
+                                    Identificación Molecular de Hongos
+                                </span>
+                            </div>
+                        </mat-card-title>
+                    </mat-card-header>
+                <mat-card-content>
+                    <p>Filogenia multi-locus </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button color="primary" routerLink="/servicios/identificacion">SABER MÁS</button>
+                </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+
+        <div style="width: 50%; margin-left: -8px; margin-right: 120px;">
+            <h2 class="section-title">Sobre PhyloMatch</h2>
+
+            <div class="services-grid">
+                <mat-card class="service-card">
+                    <mat-card-header>
+                        <mat-card-title> 
+                            <div style="display: flex; justify-content: center;">
+                                <mat-icon class="card-icon">biotech</mat-icon>
+                                <span style="padding-top: 3px;">
+                                    Identificación
+                                </span>
+                            </div>
+                        </mat-card-title>
+                    </mat-card-header>
+                <mat-card-content>
+                    <p>Identificación precisa de especies mediante análisis de marcadores moleculares y filogenia robusta.</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button color="primary" routerLink="/servicios/identificacion">SABER MÁS</button>
+                </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+        
+    </div>
+
+    
+</section>
+
+<section class="contacto-container">
+    <div class="contacto-box">
+        <h2>{{ !flagEspanolOIngles ? 'Contáctanos' : 'Contact Us' }}</h2>
+
+        <div class="contacto-inputs">
+            <div class="form-row">
+                    <mat-form-field appearance="outline">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput [(ngModel)]="nombre" required>
+                    <mat-error *ngIf="!nombre">El nombre es obligatorio</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Institución / Empresa</mat-label>
+                    <input matInput [(ngModel)]="institucion">
+                </mat-form-field>
+            </div>
+
+            <div class="form-row">
+                <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" [(ngModel)]="mail" required>
+                <mat-error *ngIf="!mail">Debes ingresar un correo válido</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                <mat-label>Asunto</mat-label>
+                <mat-select [(ngModel)]="asunto" required>
+                    <mat-option value="identificacion">Identificación Molecular</mat-option>
+                    <mat-option value="metagenomica">Metagenómica</mat-option>
+                    <mat-option value="otro">Otro</mat-option>
+                </mat-select>
+                <mat-error *ngIf="!asunto">Selecciona un asunto</mat-error>
+                </mat-form-field>
+            </div>
+
+            <mat-form-field appearance="outline" class="full-width">
+                <mat-label>Mensaje</mat-label>
+                <textarea matInput rows="8" [(ngModel)]="mensaje" required></textarea>
+                <mat-error *ngIf="!mensaje">El mensaje no puede estar vacío</mat-error>
+            </mat-form-field>
+
+            <div class="form-actions">
+                <button mat-flat-button color="primary" class="btn-enviar" (click)="enviarContacto()">
+                <mat-icon>send</mat-icon>
+                {{ !flagEspanolOIngles ? 'Enviar Mensaje' : 'Send Message' }}
+                </button>
+            </div>
+        </div>
+    </div>
+</section>

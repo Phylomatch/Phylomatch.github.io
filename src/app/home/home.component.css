@@ -1,0 +1,188 @@
+/* src/app/home/home.component.css */
+
+/* 004d40 */
+
+.hero-section {
+  background: linear-gradient(135deg, var(--brbg-dark-teal) 0%, #004d40 100%); 
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0 0 50px 50px; /* Un toque moderno */
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: white; /* Sobreescribir el verde oscuro global */
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  opacity: 0.9;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.service-card {
+  border-left: 5px solid var(--brbg-light-teal);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.mat-icon-avatar {
+  color: var(--brbg-brown);
+}
+
+.logo-container {
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;    /* Este hace el recorte */
+  border-radius: 12px; /* Aquí aplicamos el redondeado al área final */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+  background-color: white;
+  padding: 0;
+}
+
+/* Estilo de la imagen */
+.main-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  
+  /* RECORTE: 
+     Ajustamos el margen inferior negativo para esconder el 13%.
+     Como el 100% de la imagen es la base, al poner margen negativo
+     la "subimos" y el contenedor la corta abajo. 
+  */
+  margin-bottom: -6%; 
+  
+  /* Opcional: si quieres que la imagen no toque los bordes del recuadro blanco */
+  
+}
+
+.boton-idioma{
+    color: white !important; /* El !important asegura que gane a los estilos por defecto de Material */
+    border-color: rgba(255, 255, 255, 0.5) !important; /* Un borde blanco sutil si es mat-stroked */
+}
+
+.header-idioma {
+    display: flex;         /* Activamos Flexbox */
+    justify-content: flex-end; /* Empuja el contenido al final (derecha) */
+    width: 100%;           /* Ocupa todo el ancho disponible */
+    padding: 10px 20px;    /* Espaciado para que no toque los bordes de la pantalla */
+    box-sizing: border-box; 
+}
+
+.card-icon {
+    font-size: 28px !important; 
+    width: 28px !important;
+    height: 28px !important;
+    color: #01665e; 
+    margin-right: 16px;
+    overflow: visible !important;
+    border-radius: 0 !important;
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-right: 10px;
+    padding-bottom: 20px;
+}
+
+mat-card-content {
+    padding-left: 22px;
+    padding-bottom: 15px;
+}
+
+mat-card-actions {
+    padding-left: 22px;
+    padding-bottom: 20px;
+}
+
+.contacto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+    background-color: #f8f9fa; /* Un gris muy claro o crema */
+}
+
+.contacto-box {
+    width: 1000px;  /* El ancho que pediste */
+    height: 650px; /* El alto que pediste */
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.contacto-box h2 {
+    color: #01665e; /* Verde PhyloMatch */
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.contacto-inputs {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1; /* Hace que el formulario use el espacio disponible */
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row mat-form-field {
+  flex: 1; /* Hace que los dos campos midan lo mismo */
+}
+
+.full-width {
+    width: 100%;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-enviar {
+    height: 55px !important;
+    padding: 0 40px !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    background-color: #01665e !important;
+    border-radius: 30px !important;
+}
+
+

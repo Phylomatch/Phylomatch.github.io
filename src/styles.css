@@ -1,0 +1,56 @@
+/* src/styles.css */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Variables basadas en ColorBrewer BrBG */
+:root {
+  --brbg-dark-teal: #01665e;   /* Color principal: Ciencia/Bio */
+  --brbg-light-teal: #5ab4ac;  /* Secundario */
+  --brbg-cream: #f5f5f5;       /* Fondo */
+  --brbg-brown: #8c510a;       /* Acento: Seriedad/Tierra */
+  --brbg-light-brown: #d8b365; /* Acento suave */
+}
+
+html, body { 
+  height: 100%; 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: var(--brbg-cream);
+  color: #333;
+}
+
+/* --- Personalización de Angular Material --- */
+
+/* Cambiar el color del Toolbar (Header) */
+.mat-toolbar.mat-primary {
+  background-color: var(--brbg-dark-teal) !important;
+  color: white !important;
+}
+
+/* Cambiar el color de los botones 'Primary' */
+.mat-mdc-raised-button.mat-primary, 
+.mat-mdc-unelevated-button.mat-primary {
+  background-color: var(--brbg-dark-teal) !important;
+  color: white !important;
+}
+
+/* Cambiar el color de los botones 'Accent' (Contacto) */
+.mat-mdc-raised-button.mat-accent {
+  background-color: var(--brbg-brown) !important;
+  color: white !important;
+}
+
+/* Personalización de los menús desplegables */
+.mat-mdc-menu-panel {
+  background-color: white !important;
+  border-top: 4px solid var(--brbg-dark-teal);
+}
+
+/* Estilo para links activos en el menú */
+.active-link {
+  border-bottom: 2px solid var(--brbg-light-brown);
+}
+
+/* Un espaciador útil para el toolbar */
+.spacer {
+  flex: 1 1 auto;
+}
