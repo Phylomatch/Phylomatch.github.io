@@ -38,7 +38,7 @@
             </strong>
         </h2>
 
-        <h2 class="hero-title-2" style="white-space: nowrap;overflow: hidden;">
+        <h2 class="hero-title-2">
             <strong>
                 {{!flagEspanolOIngles ? "Identificación Molecular" : "Molecular Identification"}} <span> &bull; </span> 
                 {{!flagEspanolOIngles ? "Genómica" : "Genomics"}} <span> &bull; </span> 
@@ -49,84 +49,71 @@
   </div>
 </section>
 
-
 <section class="services-overview">
     <h2 class="section-title">
         {{!flagEspanolOIngles ? "Cómo trabajamos" : "How we work"}}
     </h2>
 
     <div class="contenedor-workflow-centrado">
-        <mat-card class="workflow-card-ajustada">
-            <mat-card-content class="workflow-content-minimal">
-                <img *ngIf="!flagEspanolOIngles" src="assets/Workflow_sp.png" alt="Nuestro flujo de trabajo" class="img-workflow">
-                <img *ngIf="flagEspanolOIngles" src="assets/Workflow_en.png" alt="Our workflow" class="img-workflow">
-            </mat-card-content>
-        </mat-card>
+        <img *ngIf="!flagEspanolOIngles" src="assets/Workflow_sp.png" alt="Nuestro flujo de trabajo" class="img-workflow">
+        <img *ngIf="flagEspanolOIngles" src="assets/Workflow_en.png" alt="Our workflow" class="img-workflow">
     </div>
 
-    <div style="margin-top: 40px;">
-            <h2 class="section-title">
-                {{!flagEspanolOIngles ? "Sobre nosotros" : "About us"}}
-            </h2>
+    <div class="main-content-wrapper">
+        <h2 class="section-title">
+            {{!flagEspanolOIngles ? "Sobre nosotros" : "About us"}}
+        </h2>
 
-            <div style="margin-left: 500px; margin-right: 500px;">
-
-                <div class="contenedor-sobre-nosotros" style="margin-bottom: 40px;">
-                <mat-card class="service-card card-horizontal">
-                    <div class="card-flex-container">
-                    
+        <div class="contenedor-sobre-nosotros">
+            <mat-card class="service-card card-horizontal">
+                <div class="card-flex-container">
                     <div class="content-side">
                         <mat-card-header>
-                        <mat-card-title>
-                            <div class="title-with-icon">
-                            <mat-icon class="card-icon">biotech</mat-icon>
-                            <span><p class="titulo-seccion-grande">
-                                {{!flagEspanolOIngles ? "¿Quiénes somos?" : "Who are we?"}}
-                            </p></span>
-                            </div>
-                        </mat-card-title>
+                            <mat-card-title>
+                                <div class="title-with-icon">
+                                    <mat-icon class="card-icon">biotech</mat-icon>
+                                    <span class="titulo-seccion-grande">
+                                        {{!flagEspanolOIngles ? "¿Quiénes somos?" : "Who are we?"}}
+                                    </span>
+                                </div>
+                            </mat-card-title>
                         </mat-card-header>
-                        
                         <mat-card-content>
-                        <p class="texto-estandar-moderno">
+                            <p class="texto-estandar-moderno">
                             {{!flagEspanolOIngles ? 
-                            "PhyloMatch es una empresa especializada en análisis bioinformático, dedicada a transformar datos genómicos en información clara, confiable y útil.
-                            Trabajamos con investigadores, laboratorios, instituciones y empresas que necesitan interpretar secuencias biológicas de manera precisa y profesional. 
-                            Nuestro equipo combina experiencia científica, herramientas computacionales avanzadas y un enfoque riguroso para ofrecer resultados sólidos y reproducibles.
-                            Más que procesar datos, ayudamos a convertirlos en conocimiento." 
-                            : 
-                            "PhyloMatch is a company specializing in bioinformatic and phylogenetic analysis, dedicated to transforming genomic data into clear, reliable, and actionable information.
-                            We work alongside researchers, laboratories, institutions, and companies that require precise and professional interpretation of biological sequences. Our team combines scientific expertise, advanced computational tools, and a rigorous approach to deliver solid and reproducible results.
-                            Beyond processing data, we help turn it into knowledge."}}
-                        </p>
+                                "PhyloMatch es una empresa especializada en análisis bioinformático, dedicada a transformar datos genómicos en información clara, confiable y útil.
+                                Trabajamos con investigadores, laboratorios, instituciones y empresas que necesitan interpretar secuencias biológicas de manera precisa y profesional. 
+                                Nuestro equipo combina experiencia científica, herramientas computacionales avanzadas y un enfoque riguroso para ofrecer resultados sólidos y reproducibles.
+                                Más que procesar datos, ayudamos a convertirlos en conocimiento." 
+                                : 
+                                "PhyloMatch is a company specializing in bioinformatic and phylogenetic analysis, dedicated to transforming genomic data into clear, reliable, and actionable information.
+                                We work alongside researchers, laboratories, institutions, and companies that require precise and professional interpretation of biological sequences. Our team combines scientific expertise, advanced computational tools, and a rigorous approach to deliver solid and reproducible results.
+                                Beyond processing data, we help turn it into knowledge."}}
+                            </p>
                         </mat-card-content>
                     </div>
-
                     <div class="image-side">
                         <img src="assets/quienessomos.jpg" alt="Laboratorio PhyloMatch" class="imagen-destacada">
                     </div>
-
-                    </div>
-                </mat-card>
                 </div>
+            </mat-card>
+        </div>
 
-                <div style="display: flex; justify-content: center; gap: 20px;">
-                    <mat-card class="service-card card-horizontal">
-                        <div class="card-flex-container">
-                        
-                        <div class="content-side">
-                            <mat-card-header>
+        <div class="mision-vision-container">
+            <mat-card class="service-card card-horizontal">
+                <div class="card-flex-container">
+                    <div class="content-side">
+                        <mat-card-header>
                             <mat-card-title>
                                 <div class="title-with-icon">
-                                <mat-icon class="card-icon">biotech</mat-icon>
-                                <span><p class="titulo-seccion-grande">
-                                    {{!flagEspanolOIngles ? "Nuestra misión" : "Our mision"}}
-                                    </p></span>
+                                    <mat-icon class="card-icon">biotech</mat-icon>
+                                    <span class="titulo-seccion-grande">
+                                        {{!flagEspanolOIngles ? "Nuestra misión" : "Our mission"}}
+                                    </span>
                                 </div>
                             </mat-card-title>
-                            </mat-card-header>
-                            
-                            <mat-card-content>
+                        </mat-card-header>
+                        <mat-card-content>
                             <p class="texto-estandar-moderno">
                                 {{!flagEspanolOIngles ? 
                                     "Brindar servicios de análisis bioinformático de alta calidad que permitan a nuestros clientes obtener conclusiones confiables a partir de sus datos genómicos, facilitando la investigación, el diagnóstico y la toma de decisiones basadas en evidencia científica.
@@ -135,46 +122,37 @@
                                     "To provide high-quality bioinformatics services that enable our clients to draw reliable conclusions from their genomic data, facilitating research, diagnosis, and decision-making based on scientific evidence.
                                     We focus on delivering clear, transparent, and technically robust solutions tailored to the specific needs of every project."}}
                             </p>
-                            </mat-card-content>
-                        </div>
+                        </mat-card-content>
+                    </div>
+                </div>
+            </mat-card>
 
-                        </div>
-                    </mat-card>
-
-                    <mat-card class="service-card card-horizontal">
-                        <div class="card-flex-container">
-                        
-                        <div class="content-side">
-                            <mat-card-header>
+            <mat-card class="service-card card-horizontal">
+                <div class="card-flex-container">
+                    <div class="content-side">
+                        <mat-card-header>
                             <mat-card-title>
                                 <div class="title-with-icon">
-                                <mat-icon class="card-icon">biotech</mat-icon>
-                                <span><p class="titulo-seccion-grande">
-                                    {{!flagEspanolOIngles ? "Nuestra visión" : "Our vision"}}
-                                    </p></span>
+                                    <mat-icon class="card-icon">biotech</mat-icon>
+                                    <span class="titulo-seccion-grande">
+                                        {{!flagEspanolOIngles ? "Nuestra visión" : "Our vision"}}
+                                    </span>
                                 </div>
                             </mat-card-title>
-                            </mat-card-header>
-                            
-                            <mat-card-content>
+                        </mat-card-header>
+                        <mat-card-content>
                             <p class="texto-estandar-moderno">
                                 {{!flagEspanolOIngles ? 
                                     "Ser un referente en análisis bioinformático aplicado en Latinoamérica, reconocido por la precisión, confiabilidad y utilidad de nuestros resultados, impulsando el desarrollo científico y tecnológico a través del uso inteligente de datos genómicos." 
                                     : 
                                     "To be a leader in applied bioinformatics across Latin America, recognized for the precision, reliability, and utility of our results, driving scientific and technological development through the intelligent use of genomic data."}}
                             </p>
-                            </mat-card-content>
-                        </div>
-
-                        </div>
-                    </mat-card>
+                        </mat-card-content>
+                    </div>
                 </div>
-                
-            </div>
-        
+            </mat-card>
+        </div>
     </div>
-
-    
 </section>
 
 <section class="contacto-container">
@@ -183,10 +161,8 @@
 
         <div class="contacto-inputs">
             <div class="form-row">
-                    <mat-form-field appearance="outline">
-                    <mat-label>
-                        {{ !flagEspanolOIngles ? 'Nombre' : 'Name' }}
-                    </mat-label>
+                <mat-form-field appearance="outline">
+                    <mat-label>{{ !flagEspanolOIngles ? 'Nombre' : 'Name' }}</mat-label>
                     <input matInput [(ngModel)]="nombre" required>
                     <mat-error *ngIf="!nombre">{{ !flagEspanolOIngles ? 'El nombre es obligatorio' : 'The Name is mandatory' }}</mat-error>
                 </mat-form-field>
@@ -199,33 +175,33 @@
 
             <div class="form-row">
                 <mat-form-field appearance="outline">
-                <mat-label>Email</mat-label>
-                <input matInput type="email" [(ngModel)]="mail" required>
-                <mat-error *ngIf="!mail">{{ !flagEspanolOIngles ? 'Debes ingresar un correo válido' : 'Please give us a valid email' }}</mat-error>
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" [(ngModel)]="mail" required>
+                    <mat-error *ngIf="!mail">{{ !flagEspanolOIngles ? 'Debes ingresar un correo válido' : 'Please give us a valid email' }}</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
-                <mat-label>{{ !flagEspanolOIngles ? 'Asunto' : 'Subject' }}</mat-label>
-                <mat-select [(ngModel)]="asunto" required>
-                    <mat-option value="identificacion">{{ !flagEspanolOIngles ? 'Identificación Molecular' : 'Molecular Identification' }}</mat-option>
-                    <mat-option value="metagenomica">{{ !flagEspanolOIngles ? 'Genomica' : 'Genomics' }}</mat-option>
-                    <mat-option value="metagenomica">{{ !flagEspanolOIngles ? 'Metagenómica' : 'Metagenomics' }}</mat-option>
-                    <mat-option value="otro">{{ !flagEspanolOIngles ? 'Otro' : 'Other' }}</mat-option>
-                </mat-select>
-                <mat-error *ngIf="!asunto">{{ !flagEspanolOIngles ? 'Selecciona un asunto' : 'Please select a subject' }}</mat-error>
+                    <mat-label>{{ !flagEspanolOIngles ? 'Asunto' : 'Subject' }}</mat-label>
+                    <mat-select [(ngModel)]="asunto" required>
+                        <mat-option value="identificacion">{{ !flagEspanolOIngles ? 'Identificación Molecular' : 'Molecular Identification' }}</mat-option>
+                        <mat-option value="genomica">{{ !flagEspanolOIngles ? 'Genómica' : 'Genomics' }}</mat-option>
+                        <mat-option value="metagenomica">{{ !flagEspanolOIngles ? 'Metagenómica' : 'Metagenomics' }}</mat-option>
+                        <mat-option value="otro">{{ !flagEspanolOIngles ? 'Otro' : 'Other' }}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="!asunto">{{ !flagEspanolOIngles ? 'Selecciona un asunto' : 'Please select a subject' }}</mat-error>
                 </mat-form-field>
             </div>
 
             <mat-form-field appearance="outline" class="full-width">
                 <mat-label>{{ !flagEspanolOIngles ? 'Mensaje' : 'Message' }}</mat-label>
-                <textarea matInput rows="8" [(ngModel)]="mensaje" required placeholder="{{ !flagEspanolOIngles ? 'Explica brevemente lo que necesitas.' : 'Please briefly explain what you need.' }}"></textarea>
+                <textarea matInput rows="6" [(ngModel)]="mensaje" required placeholder="{{ !flagEspanolOIngles ? 'Explica brevemente lo que necesitas.' : 'Please briefly explain what you need.' }}"></textarea>
                 <mat-error *ngIf="!mensaje">{{ !flagEspanolOIngles ? 'El mensaje no puede estar vacío.' : 'The message cannot be empty.' }}</mat-error>
             </mat-form-field>
 
             <div class="form-actions">
-                <button mat-flat-button color="primary" class="btn-enviar" (click)="enviarContacto()">
-                <mat-icon>send</mat-icon>
-                {{ !flagEspanolOIngles ? 'Enviar Mensaje' : 'Send Message' }}
+                <button mat-flat-button class="btn-enviar" (click)="enviarContacto()">
+                    <mat-icon>send</mat-icon>
+                    {{ !flagEspanolOIngles ? 'Enviar Mensaje' : 'Send Message' }}
                 </button>
             </div>
         </div>
