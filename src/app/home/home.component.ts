@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
@@ -11,7 +11,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import emailjs from '@emailjs/browser';
+import { register } from 'swiper/element/bundle';
 
+register(); // Esto registra el carrusel globalmente
+
+interface Slide {
+  image: string;
+  alt: string;
+}
 
 @Component({
   selector: 'app-home',
@@ -26,15 +33,17 @@ import emailjs from '@emailjs/browser';
     MatInputModule,
     MatSelectModule,
     FormsModule,
-    MatSnackBarModule],
+    MatSnackBarModule
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA], // <--- ESTO ES CLAVE
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
   flagEspanolOIngles: boolean = false; // FALSO ESPANOL TRUE INGLES
 
-  tituloEsp: string = 'Servicios Bioinformáticos para la identificación molecular de microorganismos y análisis de metagenomas.'
-  tituloEng: string = 'Bioinformatic Services for molecular identification of microorgamisms and metagenomic analysis.'
+  tituloEsp: string = 'Servicios Bioinformáticos para el análisis de secuencias nucleotídicas.'
+  tituloEng: string = 'Bioinformatic Services for nucleotid sequences analysis.'
 
   // Variables para capturar los datos
   nombre: string = '';
@@ -44,6 +53,12 @@ export class HomeComponent {
   mensaje: string = '';
 
   miCorreoEmpresa: string = 'phylomatch@gmail.com';
+
+  slides: Slide[] = [
+    { image: 'assets/1.jpg', alt: 'Descripción de la imagen 1' },
+    { image: 'assets/2.jpg', alt: 'Descripción de la imagen 2' },
+    { image: 'assets/3.jpg', alt: 'Descripción de la imagen 3' }
+  ];
 
   constructor(private snackBar: MatSnackBar) {}
 
