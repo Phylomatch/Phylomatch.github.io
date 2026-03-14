@@ -42,7 +42,7 @@ interface Slide {
 export class HomeComponent {
   flagEspanolOIngles: boolean = false; // FALSO ESPANOL TRUE INGLES
 
-  tituloEsp: string = 'Servicios Bioinformáticos para el análisis de secuencias nucleotídicas.'
+  tituloEsp: string = 'Servicios Bioinformáticos para el análisis de secuencias.'
   tituloEng: string = 'Bioinformatic Services for nucleotide sequences analysis.'
 
   // Variables para capturar los datos
