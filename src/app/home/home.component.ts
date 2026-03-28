@@ -23,11 +23,11 @@ interface Slide {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, 
-    MatButtonModule, 
-    MatCardModule, 
-    MatIconModule, 
-    RouterLink, 
+  imports: [CommonModule,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    RouterLink,
     MatTooltip,
     MatFormFieldModule,
     MatInputModule,
@@ -50,6 +50,8 @@ export class HomeComponent {
   asunto: string = '';
   mail: string = '';
   institucion: string = '';
+  pais: string = '';
+  postal_code: string = '';
   mensaje: string = '';
 
   miCorreoEmpresa: string = 'phylomatch@gmail.com';
@@ -64,12 +66,20 @@ export class HomeComponent {
 
   enviarContacto() {
   // 1. Validación manual (como ya la tenías)
-  if (!this.nombre || !this.asunto || !this.mail || !this.mensaje) {
+  if (!this.nombre || !this.asunto || !this.mail || !this.mensaje || !this.pais) {
     this.snackBar.open('Completa los campos obligatorios', 'Cerrar', {
       duration: 3000,
       panelClass: ['snackbar-personalizado']
     });
     return;
+  }
+
+  let mensajeProcesado: string = ''
+
+  if (this.pais.length > 0 && this.postal_code.length > 0) {
+    mensajeProcesado = 'País: '+this.pais+'\n'+'Código postal: '+this.postal_code+'\n\n'+this.mensaje
+  }else {
+    mensajeProcesado = 'País: '+this.pais+'\n\n'+this.mensaje
   }
 
   // 2. Parámetros para la plantilla de EmailJS
@@ -78,7 +88,7 @@ export class HomeComponent {
     from_email: this.mail,
     subject: this.asunto,
     institution: this.institucion,
-    message: this.mensaje
+    message: mensajeProcesado
   };
 
   // 3. Envío directo
@@ -108,6 +118,8 @@ limpiarCampos() {
   this.mail = '';
   this.institucion = '';
   this.mensaje = '';
+  this.pais = '';
+  this.postal_code = '';
 }
 
 }

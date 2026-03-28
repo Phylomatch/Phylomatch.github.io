@@ -1,5 +1,7 @@
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
 
+/* Archivo de estilos globales */
+
 /* Botón flotante - El contenedor <a> */
 .whatsapp-float {
   position: fixed;            /* ¡CLAVE! Fija el elemento a la pantalla */
@@ -12,12 +14,12 @@
   text-align: center;
   box-shadow: 2px 2px 10px rgba(0,0,0,0.15); /* Sombra suave para que resalte */
   z-index: 1000;              /* ¡CLAVE! Asegura que esté por encima de TODO */
-  
+
   /* Centrado interno */
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   /* Transición para el efecto hover */
   transition: all 0.3s ease;
   cursor: pointer;
