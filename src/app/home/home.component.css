@@ -69,7 +69,7 @@
     margin-bottom: 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
 
-    height: auto !important; 
+    height: auto !important;
     min-height: min-content;
     overflow: visible !important;
 }
@@ -103,6 +103,15 @@
     gap: 25px;
     margin-top: 30px;
     align-items: stretch; /* Esto hace que ambas midan lo mismo según la que tenga más texto */
+    width: 100%;
+}
+
+.services-3-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+    align-items: stretch;
     width: 100%;
 }
 
@@ -159,6 +168,7 @@
 @media (max-width: 850px) {
     .card-flex-container { flex-direction: column; text-align: center; }
     .mision-vision-container { grid-template-columns: 1fr; }
+    .services-3-container { grid-template-columns: 1fr; }
     .form-row { flex-direction: column; gap: 0; }
     .image-side { order: -1; margin-bottom: 20px; }
     .hero-section { height: 55vh; border-radius: 0 0 35px 35px; }
@@ -211,7 +221,7 @@
 
 /* Obligamos a los campos de Material a crecer igual */
 .form-row mat-form-field {
-    flex: 1; 
+    flex: 1;
     width: 100%;
 }
 
@@ -251,7 +261,7 @@
         flex-direction: column; /* Apila Nombre arriba de Institución */
         gap: 0;
     }
-    
+
     .btn-enviar {
         width: 100%; /* Botón ancho completo en móvil para mejor usabilidad */
     }

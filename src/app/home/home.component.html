@@ -81,14 +81,10 @@
                         <mat-card-content>
                             <p class="texto-estandar-moderno">
                             {{!flagEspanolOIngles ?
-                                "PhyloMatch es una empresa especializada en análisis bioinformático, dedicada a transformar datos genómicos en información clara, confiable y útil.
-                                Trabajamos con investigadores, laboratorios, instituciones y empresas que necesitan interpretar secuencias biológicas de manera precisa y profesional.
-                                Nuestro equipo combina experiencia científica, herramientas computacionales avanzadas y un enfoque riguroso para ofrecer resultados sólidos y reproducibles.
-                                Más que procesar datos, ayudamos a convertirlos en conocimiento."
+                                "Somos una empresa especializada en el análisis bioinformático de secuencias de ADN, orientada a transformar la complejidad biológica en información clara, interpretable y de alto valor. Trabajamos con investigadores, laboratorios, instituciones y empresas que requieren analizar secuencias biológicas de manera precisa y rigurosa. Nuestro equipo combina experiencia científica, herramientas computacionales avanzadas y un enfoque metodológico sólido para generar resultados robustos y reproducibles. Más que procesar datos, los convertimos en conocimiento."
                                 :
-                                "PhyloMatch is a company specializing in bioinformatic and phylogenetic analysis, dedicated to transforming genomic data into clear, reliable, and actionable information.
-                                We work alongside researchers, laboratories, institutions, and companies that require precise and professional interpretation of biological sequences. Our team combines scientific expertise, advanced computational tools, and a rigorous approach to deliver solid and reproducible results.
-                                Beyond processing data, we help turn it into knowledge."}}
+                                "We are a company specialized in the bioinformatic analysis of DNA sequences, focused on transforming biological complexity into clear, interpretable, and high-value insights. We work with researchers, laboratories, institutions, and companies that require precise and rigorous analysis of biological sequences. Our team combines scientific expertise, advanced computational tools, and a solid methodological approach to generate robust and reproducible results. More than processing data, we transform it into knowledge."
+                            }}
                             </p>
                         </mat-card-content>
                     </div>
@@ -116,11 +112,10 @@
                         <mat-card-content>
                             <p class="texto-estandar-moderno">
                                 {{!flagEspanolOIngles ?
-                                    "Brindar servicios de análisis bioinformático de alta calidad que permitan a nuestros clientes obtener conclusiones confiables a partir de sus datos genómicos, facilitando la investigación, el diagnóstico y la toma de decisiones basadas en evidencia científica.
-                                    Nos enfocamos en ofrecer soluciones claras, transparentes y técnicamente robustas, adaptadas a las necesidades de cada proyecto."
+                                    "Brindar servicios de análisis bioinformático de alta calidad que permitan a nuestros clientes obtener conclusiones confiables a partir de sus secuencias de ADN, facilitando la investigación, el diagnóstico y la toma de decisiones basadas en evidencia científica. Nos enfocamos en ofrecer soluciones claras, transparentes y técnicamente robustas, adaptadas a las necesidades de cada proyecto."
                                     :
-                                    "To provide high-quality bioinformatics services that enable our clients to draw reliable conclusions from their genomic data, facilitating research, diagnosis, and decision-making based on scientific evidence.
-                                    We focus on delivering clear, transparent, and technically robust solutions tailored to the specific needs of every project."}}
+                                    "To provide high-quality bioinformatic analysis services that enable our clients to obtain reliable insights from their DNA sequence datasets, facilitating research, diagnostics, and evidence-based decision-making. We focus on delivering clear, transparent, and technically robust solutions tailored to the specific needs of each project."
+                                }}
                             </p>
                         </mat-card-content>
                     </div>
@@ -153,6 +148,90 @@
             </mat-card>
         </div>
     </div>
+
+    <div class="main-content-wrapper">
+        <h2 class="section-title">
+            {{!flagEspanolOIngles ? "Nuestros servicios" : "Our services"}}
+        </h2>
+        <div class="services-3-container">
+            <mat-card class="service-card card-horizontal">
+                <div class="card-flex-container">
+                    <div class="content-side">
+                        <mat-card-header>
+                            <mat-card-title>
+                                <div class="title-with-icon">
+                                    <span class="titulo-seccion-grande">
+                                        {{!flagEspanolOIngles ? "Identificación molecular" : "Molecular identification"}}
+                                    </span>
+                                </div>
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p class="texto-estandar-moderno">
+                                {{!flagEspanolOIngles ?
+                                    "Determinación de la identidad de un microorganismo a nivel de especie mediante filogenia molecular."
+                                    :
+                                    "Determination of the identity of a microorganism at the species level through molecular phylogeny."
+                                }}
+                            </p>
+                        </mat-card-content>
+                    </div>
+                </div>
+            </mat-card>
+
+            <mat-card class="service-card card-horizontal">
+                <div class="card-flex-container">
+                    <div class="content-side">
+                        <mat-card-header>
+                            <mat-card-title>
+                                <div class="title-with-icon">
+                                    <span class="titulo-seccion-grande">
+                                        {{!flagEspanolOIngles ? "Minería genética a medida" : "Custom genetic mining"}}
+                                    </span>
+                                </div>
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p class="texto-estandar-moderno">
+                                {{!flagEspanolOIngles ?
+                                    "Exploración de genomas y metagenomas para identificar genes, rutas metabólicas o funciones de interés, según los objetivos del proyecto."
+                                    :
+                                    "Exploration of genomes and metagenomes to identify genes, metabolic pathways, or functions of interest, according to the project’s objectives."
+                                    }}
+                            </p>
+                        </mat-card-content>
+                    </div>
+                </div>
+            </mat-card>
+
+            <mat-card class="service-card card-horizontal">
+                <div class="card-flex-container">
+                    <div class="content-side">
+                        <mat-card-header>
+                            <mat-card-title>
+                                <div class="title-with-icon">
+                                    <span class="titulo-seccion-grande">
+                                        {{!flagEspanolOIngles ? "Perfil taxonómico de metagenomas" : "Taxonomic profiling of metagenomic data"}}
+                                    </span>
+                                </div>
+                            </mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <p class="texto-estandar-moderno">
+                                {{!flagEspanolOIngles ?
+                                    "Identificación y estimación de la abundancia de microorganismos presentes en una muestra a partir de datos metagenómicos."
+                                    :
+                                    "Identification and estimation of the abundance of microorganisms present in a sample based on metagenomic data."
+                                    }}
+                            </p>
+                        </mat-card-content>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+
+    </div>
+
 </section>
 
 <section class="contacto-container">
@@ -184,8 +263,8 @@
                     <mat-label>{{ !flagEspanolOIngles ? 'Asunto' : 'Subject' }}</mat-label>
                     <mat-select [(ngModel)]="asunto" required>
                         <mat-option value="identificacion">{{ !flagEspanolOIngles ? 'Identificación Molecular' : 'Molecular Identification' }}</mat-option>
-                        <mat-option value="genomica">{{ !flagEspanolOIngles ? 'Genómica' : 'Genomics' }}</mat-option>
-                        <mat-option value="metagenomica">{{ !flagEspanolOIngles ? 'Metagenómica' : 'Metagenomics' }}</mat-option>
+                        <mat-option value="genomica">{{ !flagEspanolOIngles ? 'Minería genética a medida' : 'Custom genetic mining ' }}</mat-option>
+                        <mat-option value="metagenomica">{{ !flagEspanolOIngles ? 'Perfil taxonómico de metagenomas' : 'Taxonomic profiling of metagenomic data' }}</mat-option>
                         <mat-option value="otro">{{ !flagEspanolOIngles ? 'Otro' : 'Other' }}</mat-option>
                     </mat-select>
                     <mat-error *ngIf="!asunto">{{ !flagEspanolOIngles ? 'Selecciona un asunto' : 'Please select a subject' }}</mat-error>
