@@ -81,9 +81,9 @@
                         <mat-card-content>
                             <p class="texto-estandar-moderno">
                             {{!flagEspanolOIngles ?
-                                "Somos una empresa especializada en el análisis bioinformático de secuencias de ADN, orientada a transformar la complejidad biológica en información clara, interpretable y de alto valor. Trabajamos con investigadores, laboratorios, instituciones y empresas que requieren analizar secuencias biológicas de manera precisa y rigurosa. Nuestro equipo combina experiencia científica, herramientas computacionales avanzadas y un enfoque metodológico sólido para generar resultados robustos y reproducibles. Más que procesar datos, los convertimos en conocimiento."
+                                "Somos una empresa Chilena especializada en el análisis bioinformático de secuencias de ADN, orientada a transformar la complejidad biológica en información clara, interpretable y de alto valor. Trabajamos con investigadores, laboratorios, instituciones y empresas que requieren analizar secuencias biológicas de manera precisa y rigurosa. Nuestro equipo combina experiencia científica, herramientas computacionales avanzadas y un enfoque metodológico sólido para generar resultados robustos y reproducibles. Más que procesar datos, los convertimos en conocimiento."
                                 :
-                                "We are a company specialized in the bioinformatic analysis of DNA sequences, focused on transforming biological complexity into clear, interpretable, and high-value insights. We work with researchers, laboratories, institutions, and companies that require precise and rigorous analysis of biological sequences. Our team combines scientific expertise, advanced computational tools, and a solid methodological approach to generate robust and reproducible results. More than processing data, we transform it into knowledge."
+                                "We are a Chilean company specialized in the bioinformatic analysis of DNA sequences, focused on transforming biological complexity into clear, interpretable, and high-value insights. We work with researchers, laboratories, institutions, and companies that require precise and rigorous analysis of biological sequences. Our team combines scientific expertise, advanced computational tools, and a solid methodological approach to generate robust and reproducible results. More than processing data, we transform it into knowledge."
                             }}
                             </p>
                         </mat-card-content>
@@ -186,7 +186,7 @@
                             <mat-card-title>
                                 <div class="title-with-icon">
                                     <span class="titulo-seccion-grande">
-                                        {{!flagEspanolOIngles ? "Minería genética a medida" : "Custom genetic mining"}}
+                                        {{!flagEspanolOIngles ? "Minería genómica a medida" : "Custom genomic mining"}}
                                     </span>
                                 </div>
                             </mat-card-title>
@@ -243,7 +243,7 @@
                 <mat-form-field appearance="outline">
                     <mat-label>{{ !flagEspanolOIngles ? 'Nombre' : 'Name' }}</mat-label>
                     <input matInput [(ngModel)]="nombre" required>
-                    <mat-error *ngIf="!nombre">{{ !flagEspanolOIngles ? 'El nombre es obligatorio' : 'The Name is mandatory' }}</mat-error>
+                    <mat-error *ngIf="!nombre">{{ !flagEspanolOIngles ? 'El nombre es obligatorio.' : 'The Name is mandatory.' }}</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
@@ -256,18 +256,18 @@
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
                     <input matInput type="email" [(ngModel)]="mail" required>
-                    <mat-error *ngIf="!mail">{{ !flagEspanolOIngles ? 'Debes ingresar un correo válido' : 'Please give us a valid email' }}</mat-error>
+                    <mat-error *ngIf="!mail">{{ !flagEspanolOIngles ? 'Debes ingresar un correo válido.' : 'Please give us a valid email.' }}</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
-                    <mat-label>{{ !flagEspanolOIngles ? 'Asunto' : 'Subject' }}</mat-label>
+                    <mat-label>{{ !flagEspanolOIngles ? 'Servicio' : 'Service' }}</mat-label>
                     <mat-select [(ngModel)]="asunto" required>
-                        <mat-option value="identificacion">{{ !flagEspanolOIngles ? 'Identificación Molecular' : 'Molecular Identification' }}</mat-option>
-                        <mat-option value="genomica">{{ !flagEspanolOIngles ? 'Minería genética a medida' : 'Custom genetic mining ' }}</mat-option>
-                        <mat-option value="metagenomica">{{ !flagEspanolOIngles ? 'Perfil taxonómico de metagenomas' : 'Taxonomic profiling of metagenomic data' }}</mat-option>
-                        <mat-option value="otro">{{ !flagEspanolOIngles ? 'Otro' : 'Other' }}</mat-option>
+                        <mat-option value="identificacion">{{ !flagEspanolOIngles ? 'Identificación Molecular.' : 'Molecular Identification.' }}</mat-option>
+                        <mat-option value="genomica">{{ !flagEspanolOIngles ? 'Minería genómica a medida.' : 'Custom genomic mining.' }}</mat-option>
+                        <mat-option value="metagenomica">{{ !flagEspanolOIngles ? 'Perfil taxonómico de metagenomas.' : 'Taxonomic profiling of metagenomic data.' }}</mat-option>
+                        <mat-option value="otro">{{ !flagEspanolOIngles ? 'Otro.' : 'Other.' }}</mat-option>
                     </mat-select>
-                    <mat-error *ngIf="!asunto">{{ !flagEspanolOIngles ? 'Selecciona un asunto' : 'Please select a subject' }}</mat-error>
+                    <mat-error *ngIf="!asunto">{{ !flagEspanolOIngles ? 'Selecciona un servicio.' : 'Please select a service.' }}</mat-error>
                 </mat-form-field>
             </div>
 
@@ -275,7 +275,7 @@
               <mat-form-field appearance="outline">
                     <mat-label>{{ !flagEspanolOIngles ? 'País' : 'Country' }}</mat-label>
                     <input matInput [(ngModel)]="pais" required>
-                    <mat-error *ngIf="!pais">{{ !flagEspanolOIngles ? 'El país es obligatorio' : 'The country is mandatory' }}</mat-error>
+                    <mat-error *ngIf="!pais">{{ !flagEspanolOIngles ? 'El país es obligatorio.' : 'The country is mandatory.' }}</mat-error>
               </mat-form-field>
 
               <mat-form-field appearance="outline">
